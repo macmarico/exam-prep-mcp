@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "seed": "node seed/seed.js"
+    "seed": "node seed/seed.js",
+    "seed:if-empty": "node seed/seed-if-empty.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
