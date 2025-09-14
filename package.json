@@ -1,0 +1,16 @@
+{
+  "name": "app-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c bgBlue.bold,bgGreen.bold \"yarn --cwd packages/backend dev\" \"yarn --cwd packages/frontend dev\"",
+    "start": "yarn --cwd packages/backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
