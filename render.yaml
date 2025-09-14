@@ -5,8 +5,8 @@ services:
     plan: free
     region: oregon
     repo: https://example.com/your/repo.git
-    buildCommand: npm run build
-    startCommand: npm start
+    buildCommand: cd apps/backend && npm ci || npm install
+    startCommand: cd apps/backend && npm start
     envVars:
       - key: NODE_ENV
         value: production

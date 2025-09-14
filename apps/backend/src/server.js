@@ -45,7 +45,7 @@ app.get('/health', (_req, res) => {
 let mcpSchema;
 try {
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  mcpSchema = require('../mcp/mcp-schema.json');
+  mcpSchema = require('../../mcp/mcp-schema.json');
 } catch (_e) {
   mcpSchema = { tools: [] };
 }
