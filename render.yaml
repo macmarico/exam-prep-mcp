@@ -7,6 +7,7 @@ services:
     repo: https://example.com/your/repo.git
     buildCommand: cd apps/backend && npm ci || npm install
     startCommand: cd apps/backend && npm start
+    postDeployCommand: cd apps/backend && npm run seed:if-empty
     envVars:
       - key: NODE_ENV
         value: production
