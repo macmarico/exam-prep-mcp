@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "tools": [
+    {
+      "name": "question.fetch",
+      "description": "Fetch questions by topic and difficulty.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "topic": { "type": "string", "description": "Topic name, e.g., javascript" },
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "medium", "hard"],
+            "description": "Question difficulty"
+          }
+        },
+        "required": ["topic", "difficulty"]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "List of question strings"
+          },
+          "error": { "type": "string" }
+        },
+        "required": ["questions"]
+      },
+      "http": {
+        "method": "POST",
+        "path": "/question.fetch"
+      }
+    }
+  ]
+}
+
