@@ -3,47 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Question Fetch UI</title>
+  <title>Question Browser (React)</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Question Browser</h1>
-      <p>Query questions by topic and difficulty.</p>
-    </header>
-
-    <section class="controls">
-      <form id="query-form">
-        <div class="field">
-          <label for="topic">Topic</label>
-          <input id="topic" name="topic" type="text" placeholder="e.g. math, science" required>
-        </div>
-        <div class="field">
-          <label for="difficulty">Difficulty</label>
-          <select id="difficulty" name="difficulty" required>
-            <option value="">Select...</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="serverUrl">Server URL</label>
-          <input id="serverUrl" name="serverUrl" type="url" placeholder="http://localhost:3000" value="http://localhost:3000" required>
-        </div>
-        <button id="submit" type="submit">Fetch Questions</button>
-      </form>
-    </section>
-
-    <section class="status" id="status" aria-live="polite"></section>
-
-    <section class="results">
-      <h2>Results</h2>
-      <ul id="results"></ul>
-    </section>
-  </div>
-
-  <script src="app.js"></script>
+  <div id="root"></div>
+  <script type="module" src="main.jsx"></script>
 </body>
 </html>
