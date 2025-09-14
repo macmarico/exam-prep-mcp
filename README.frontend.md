@@ -6,8 +6,8 @@ A minimal React UI that interacts with a Node.js server exposing a `/question.fe
 
 ```bash
 cd frontend
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 Open the printed URL (e.g., `http://localhost:5173`).
 
@@ -16,9 +16,9 @@ Ensure the backend is running and exposes `POST /question.fetch`:
 - Response body: `{ "questions": string[] }`
 
 ## Scripts
-- `npm run dev` – start Vite dev server
-- `npm run build` – production build
-- `npm run preview` – preview production build
+- `yarn dev` – start Vite dev server
+- `yarn build` – production build
+- `yarn preview` – preview production build
 
 ## Files
 - `frontend/index.html` – HTML entry
