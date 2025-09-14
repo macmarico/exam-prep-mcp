@@ -5,9 +5,12 @@ const Question = require('../src/models/Question');
 
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'memory';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function seed() {
+  if (!MONGODB_URI) {
+    throw new Error('MONGODB_URI must be set in environment');
+  }
   await connectToDatabase(MONGODB_URI);
 
   const sampleQuestions = require('../src/sampleQuestions');
