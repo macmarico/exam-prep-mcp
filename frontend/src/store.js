@@ -1,4 +1,4 @@
-import { configureStore, createSlice, createAsyncThunk } from 'https://esm.sh/@reduxjs/toolkit@2.2.7';
+import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 function safeGetLocalStorage(key, fallback) {
   try {

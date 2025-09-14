@@ -1,7 +1,6 @@
-import React, { useEffect, useMemo } from 'https://esm.sh/react@18.3.1';
-import { useDispatch, useSelector } from 'https://esm.sh/react-redux@8.1.3';
+import React, { useEffect, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
-  store,
   fetchQuestions,
   setTopic,
   setDifficulty,

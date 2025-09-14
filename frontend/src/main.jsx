@@ -1,6 +1,6 @@
-import React from 'https://esm.sh/react@18.3.1';
-import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
-import { Provider } from 'https://esm.sh/react-redux@8.1.3';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 import App from './App.jsx';
 import { store } from './store.js';
 
