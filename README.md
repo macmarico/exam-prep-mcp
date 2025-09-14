@@ -57,4 +57,15 @@ Response:
 
 Available at `GET /mcp/schema` and in `mcp/mcp-schema.json`.
 
+## Deploying to Render
+
+1. Ensure `MONGODB_URI` is set to your Atlas connection string (password URL-encoded).
+2. Commit `render.yaml` (already included). On Render, create a Web Service from this repo.
+3. In Render dashboard, set Environment Variables:
+   - `NODE_ENV=production`
+   - `MONGODB_URI=<your atlas uri>`
+   - `AUTO_SEED=false` (set `true` once to auto-seed on first boot if desired)
+4. Render sets `PORT`. This app respects `PORT` automatically.
+
+
 # exam-prep-mcp

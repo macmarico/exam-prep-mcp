@@ -13,17 +13,20 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mcp_questions';
+const AUTO_SEED = String(process.env.AUTO_SEED || 'false').toLowerCase() === 'true';
 
 // Connect to MongoDB
 connectToDatabase(MONGODB_URI)
   .then(async () => {
     // eslint-disable-next-line no-console
     console.log('Connected to MongoDB');
-    const count = await Question.countDocuments();
-    if (count === 0) {
-      await Question.insertMany(sampleQuestions);
-      // eslint-disable-next-line no-console
-      console.log('Seeded sample questions on startup');
+    if (AUTO_SEED) {
+      const count = await Question.countDocuments();
+      if (count === 0) {
+        await Question.insertMany(sampleQuestions);
+        // eslint-disable-next-line no-console
+        console.log('Seeded sample questions on startup');
+      }
     }
   })
   .catch((error) => {
